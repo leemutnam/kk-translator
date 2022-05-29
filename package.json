@@ -1,0 +1,44 @@
+{
+  "name": "kk-translator",
+  "version": "1.0.0",
+  "main": "main.js",
+  "engines": {
+    "node": "~16.4"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "electron-forge start",
+    "start:dev": "NODE_ENV=dev electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.63",
+    "@electron-forge/maker-deb": "^6.0.0-beta.63",
+    "@electron-forge/maker-dmg": "^6.0.0-beta.63",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "electron": "^18.0.3",
+    "electron-reload": "^2.0.0-alpha.1"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "./assets/translate_icon_bg_@1024.icns",
+        "arch": [
+          "x64",
+          "arm64"
+        ]
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-dmg"
+        }
+      ]
+    }
+  }
+}
